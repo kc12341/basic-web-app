@@ -34,5 +34,13 @@ export default function QueryProcessor(query: string): string {
     return (Math.max(x,y,z)).toString();
   }
 
+  const product = query.match(/What is (\d+) multiplied by (\d+)?/);
+  if (product) {
+    const x: number = parseInt(product[1]);
+    const y: number = parseInt(product[2]);
+    return (x * y).toString();
+  }
+
+
   return "";
 }

@@ -41,11 +41,20 @@ describe("QueryProcessor", () => {
             "108"
           ));
     });
+
     test('should return max', () => {
         const query = "Which of the following numbers is the largest: 60, 67, 84?";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
             "84"
+          ));
+    });
+
+    test('should return product', () => {
+        const query = "What is 3 multiplied by 4?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "12"
           ));
     });
 });
