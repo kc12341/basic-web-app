@@ -12,6 +12,7 @@ export default function QueryProcessor(query: string): string {
       "kylechen"
     );
   }
+  
   if (query.toLowerCase().includes("name")) {
     return (
       "ka"
