@@ -33,4 +33,19 @@ describe("QueryProcessor", () => {
             "ka"
           ));
     });
+
+    test('should return sum', () => {
+        const query = "What is 14 plus 94?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "108"
+          ));
+    });
+    test('should return max', () => {
+        const query = "Which of the following numbers is the largest: 60, 67, 84?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "84"
+          ));
+    });
 });
